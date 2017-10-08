@@ -6,8 +6,6 @@ const Mainloop = imports.mainloop;
 const Lang = imports.lang;
 const PopupMenu = imports.ui.popupMenu;
 const Applet = imports.ui.applet;
-const Cairo = imports.cairo;
-const Clutter = imports.gi.Clutter;
 
 const uuid = "disk-read-and-write-speed@cardsurf";
 const AppletDirectory = imports.ui.appletManager.applets[uuid];
@@ -453,8 +451,8 @@ HoverMenuTable.prototype = {
 
     _append_semicolon: function(css_style){
         css_style = css_style.trim();
-        last_char = css_style.slice(-1);
-        semicolon = ';';
+        let last_char = css_style.slice(-1);
+        let semicolon = ';';
         if (last_char != semicolon) {
             css_style += semicolon;
         }
